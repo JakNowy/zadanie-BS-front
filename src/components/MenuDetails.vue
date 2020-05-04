@@ -35,7 +35,7 @@ export default {
             detailColumns: [
                 { name: 'name', label: 'Nazwa', field: 'name', sortable: false , align: 'left' },
                 { name: 'description', label: 'Opis', field: 'description', sortable: false , align: 'center' },
-                { name: 'is_vegan', label: 'Vegan', field: 'is_vegan', sortable: false , align: 'center', format: val => val ? 'Tak' : 'Nie'},
+                { name: 'is_vegan', label: 'Wegańskie', field: 'is_vegan', sortable: false , align: 'center', format: val => val ? 'Tak' : 'Nie'},
                 { name: 'price', label: 'Cena', field: 'price', sortable: false , align: 'center', format: val => `${val} zl`},
             ],
         }

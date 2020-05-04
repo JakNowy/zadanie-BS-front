@@ -78,9 +78,9 @@ export default {
       },
       orderringOptions: [
         {label: 'Nazwa', value: 'name'},
-        {label: 'Nazwa (malejaco)', value: '-name'},
-        {label: 'Liczba dan', value: 'dish_count'},
-        {label: 'Liczba dan (malejaco)', value: '-dish_count'},
+        {label: 'Nazwa (malejąco)', value: '-name'},
+        {label: 'Liczba dań', value: 'dish_count'},
+        {label: 'Liczba dań (malejąco)', value: '-dish_count'},
       ],
       orderring: {
         label: 'Nazwa',
