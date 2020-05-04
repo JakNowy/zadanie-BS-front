@@ -57,13 +57,15 @@
 import axios from 'axios';
 import MenuDetails from "@/components/MenuDetails";
 import dayjs from "dayjs";
+
 export default {
   components: {
     MenuDetails
   },
   mounted() {
-
-    this.fetchMenus('http://127.0.0.1:8000/api/menus/?', null, 3, null)
+    let url2 = process.env.VUE_APP_BACKEND_SERVER
+    console.log(url2)
+    this.fetchMenus('http://localhost:8000/api/menus/?', null, 3, null)
   },
   data () {
     return {
@@ -106,7 +108,7 @@ export default {
   },
   watch: {
     orderring: function () {
-      this.fetchMenus('http://127.0.0.1:8000/api/menus/?', null, this.pagination.rowsPerPage, this.orderring.value)
+      this.fetchMenus('http://localhost:8000/api/menus/?', null, this.pagination.rowsPerPage, this.orderring.value)
     }
   },
   methods: {
@@ -127,7 +129,7 @@ export default {
     },
     handleRowClick (event, row) {
       this.detailMenuDialog = true
-      let url = 'http://127.0.0.1:8000/api/menus/' + row.id
+      let url = 'http://localhost:8000/api/menus/' + row.id
       axios.get(url).then((response) => {
         this.detailResponse = response
       })
