@@ -62,6 +62,7 @@ export default {
     MenuDetails
   },
   mounted() {
+
     this.fetchMenus('http://127.0.0.1:8000/api/menus/?', null, 3, null)
   },
   data () {
